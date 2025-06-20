@@ -4,30 +4,63 @@ body {
     margin: 0;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
+    background: #e6f7f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .container {
     display: grid;
-    grid-template-columns: repeat(2, 200px);
-    grid-gap: 30px;
+    grid-template-columns: repeat(2, 180px);
+    grid-template-rows: repeat(2, 180px);
+    gap: 30px;
+    width: max-content;
+    padding: 20px 0;
 }
 
-button {
-    width: 200px;
-    height: 120px;
-    font-size: 24px;
-    font-weight: bold;
-    border: none;
-    border-radius: 15px;
+.icon {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(18, 130, 119, 0.15);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    background: linear-gradient(135deg, #4A90E2, #357ABD);
-    color: white;
-    box-shadow: 0 5px 15px rgba(53, 122, 189, 0.5);
-    transition: background 0.3s ease;
+    user-select: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 180px;
+    height: 180px;
+    box-sizing: border-box;
 }
 
-button:hover {
-    background: linear-gradient(135deg, #357ABD, #2a5d8f);
+.icon:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(18, 130, 119, 0.3);
+}
+
+.icon img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 3px 3px rgba(18, 130, 119, 0.3));
+}
+
+.icon h3 {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #128277;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    color: inherit;
+    width: 100%;
+    height: 100%;
 }
