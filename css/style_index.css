@@ -57,7 +57,7 @@ body {
     margin: 0;
 }
 
-a {
+#wedding, #bapteme, #company, #birthday {
     text-decoration: none;
     display: block;
     color: inherit;
