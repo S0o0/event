@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    grid-gap: 30px;
+}
+
+button {
+    width: 200px;
+    height: 120px;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #4A90E2, #357ABD);
+    color: white;
+    box-shadow: 0 5px 15px rgba(53, 122, 189, 0.5);
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #357ABD, #2a5d8f);
+}
