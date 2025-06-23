@@ -6,13 +6,16 @@ body {
     align-items: center;
 
     background-image: url(../img/background_wedding.jpg);
-    background-size: cover;
-    background-position: center;
-    /* Centrage horizontal et vertical */
+    background-size: contain;
+    /* Remplace cover pour que l'image soit entièrement visible */
+    background-position: center center;
+    /* Centre horizontalement et verticalement */
     background-repeat: no-repeat;
-    /* Évite la répétition de l’image */
+    /* Empêche les répétitions */
+    background-color: #f8f8f8;
+    /* Couleur de fond de secours */
 
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(8px);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
