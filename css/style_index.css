@@ -10,11 +10,12 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: repeat(2, 180px);
-    grid-template-rows: repeat(2, 180px);
-    gap: 200px;
+    grid-template-columns: repeat(2, 300px);
+    grid-template-rows: repeat(2, 300px);
+    gap: 40px;
     width: max-content;
     padding: 20px 0;
+    justify-content: center;
 }
 
 .icon {
