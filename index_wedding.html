@@ -14,10 +14,17 @@
 </head>
 
 <body>
+
     <!-- Bouton retour -->
-    <a class="back-button" href="index.html">
+    <a class="back-button" href="index.html" id="backbutton">
         Retour
     </a>
+
+    <!-- Bouton admin -->
+    <div id="admin-access">
+        <button onclick="demanderMotDePasse()">🔒 Admin</button>
+    </div>
+
     <div class="container">
         <div class="item" style="grid-area: tl;">
             <a href="livreor.html" id="option" class="icon">
@@ -51,7 +58,7 @@
         </div>
     </div>
 
-
+    <script src="./js/script.BackButton.js"></script>
 </body>
 
 </html>
