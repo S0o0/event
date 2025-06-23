@@ -12,7 +12,7 @@ body {
     background-repeat: no-repeat;
     /* Évite la répétition de l’image */
 
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(10px);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -41,8 +41,9 @@ body {
 .icon h3 {
     font-weight: 700;
     font-size: 1.3rem;
-    color: rgb(209, 66, 56);
+    color: #043f13;
     margin: 0;
+    font-family: 'Rubik', sans-serif;
 }
 
 #option {
