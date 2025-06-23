@@ -1,0 +1,5 @@
+body {
+    background-image: url(../img/background_birthday.jpg);
+    background-size: cover;
+    backdrop-filter: blur(20px);
+}
