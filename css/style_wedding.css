@@ -4,8 +4,14 @@ body {
     margin: 0;
     justify-content: center;
     align-items: center;
+
     background-image: url(../img/background_wedding.jpg);
     background-size: cover;
+    background-position: center;
+    /* Centrage horizontal et vertical */
+    background-repeat: no-repeat;
+    /* Évite la répétition de l’image */
+
     backdrop-filter: blur(2px);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
