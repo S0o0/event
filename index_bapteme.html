@@ -1,27 +1,184 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baptême</title>
-    <link rel="stylesheet" href="./css/style_index.css">
-    <link rel="stylesheet" href="./css/style_backbutton.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Baptêmes Célestes - Événements Inoubliables</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <div class="container">
-        <!-- Bouton retour -->
-        <a class="back-button" href="index.html">
-            <i class="fas fa-arrow-left"></i>
-        </a>
-        <button id="btnOption1">Option 1</button>
-        <button id="btnOption2">Option 2</button>
-        <button id="btnOption3">Option 3</button>
-        <button id="btnOption4">Option 4</button>
-    </div>
-</body>
+    <div class="decoration"></div>
+    <div class="decoration"></div>
+    <div class="decoration"></div>
 
+    <div class="container">
+        <header>
+            <h1>🕊️ Baptêmes Célestes</h1>
+            <p class="subtitle">Créateur de Moments Sacrés</p>
+            <p class="intro">
+                Nous transformons chaque baptême en une célébration inoubliable, 
+                alliant tradition spirituelle et élégance moderne pour honorer 
+                ce moment précieux de la vie.
+            </p>
+        </header>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🏰</div>
+                <h3 class="service-title">Lieux de Cérémonie</h3>
+                <p class="service-description">
+                    Découvrez nos églises partenaires et chapelles privées, 
+                    sélectionnées pour leur beauté architecturale et leur atmosphère sacrée.
+                </p>
+                <button class="btn" onclick="redirectToVenues()">Voir les Lieux</button>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📸</div>
+                <h3 class="service-title">Photographie</h3>
+                <p class="service-description">
+                    Immortalisez chaque instant avec nos photographes spécialisés 
+                    dans les cérémonies religieuses et les portraits familiaux.
+                </p>
+                <button class="btn" onclick="redirectToPhotography()">Nos Photographes</button>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🎂</div>
+                <h3 class="service-title">Réception & Traiteur</h3>
+                <p class="service-description">
+                    Prolongez la célébration avec nos services de réception : 
+                    menus raffinés, gâteaux personnalisés et décoration élégante.
+                </p>
+                <button class="btn" onclick="redirectToCatering()">Services Traiteur</button>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🎁</div>
+                <h3 class="service-title">Cadeaux & Souvenirs</h3>
+                <p class="service-description">
+                    Offrez des souvenirs mémorables : médailles gravées, 
+                    livres religieux personnalisés et coffrets de baptême.
+                </p>
+                <button class="btn" onclick="redirectToGifts()">Boutique Souvenirs</button>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🌸</div>
+                <h3 class="service-title">Décoration Florale</h3>
+                <p class="service-description">
+                    Embellissez votre cérémonie avec nos arrangements floraux 
+                    délicats, adaptés à la spiritualité de l'événement.
+                </p>
+                <button class="btn" onclick="redirectToFlowers()">Créations Florales</button>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🎵</div>
+                <h3 class="service-title">Musique Sacrée</h3>
+                <p class="service-description">
+                    Accompagnement musical avec organistes, chorales 
+                    et musiciens spécialisés dans le répertoire religieux.
+                </p>
+                <button class="btn" onclick="redirectToMusic()">Musiciens</button>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <h2 style="color: #2d3748; margin-bottom: 20px; font-size: 2.2em;">
+                ✨ Planifions Ensemble Votre Baptême
+            </h2>
+            <p style="color: #4a5568; font-size: 1.1em; margin-bottom: 30px;">
+                Chaque baptême est unique. Contactez-nous pour une consultation personnalisée 
+                et créons ensemble une célébration qui vous ressemble.
+            </p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <h4>Téléphone</h4>
+                    <p>+33 1 23 45 67 89</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <h4>Email</h4>
+                    <p>contact@baptemes-celestes.fr</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <h4>Adresse</h4>
+                    <p>15 Rue de la Paix<br>75001 Paris</p>
+                </div>
+            </div>
+            
+            <button class="btn" onclick="scheduleConsultation()" style="margin-top: 30px; font-size: 1.1em; padding: 15px 40px;">
+                Réserver une Consultation
+            </button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Baptêmes Célestes. Tous droits réservés. | Créé avec 💙 pour célébrer la vie</p>
+    </footer>
+
+    <script>
+        // Funciones para redirigir a diferentes servicios
+        function redirectToVenues() {
+            // Aquí puedes cambiar la URL por tu sitio de venues
+            window.open('https://example.com/venues-bapteme', '_blank');
+        }
+
+        function redirectToPhotography() {
+            // URL para fotografía
+            window.open('https://example.com/photographe-bapteme', '_blank');
+        }
+
+        function redirectToCatering() {
+            // URL para catering
+            window.open('https://example.com/traiteur-bapteme', '_blank');
+        }
+
+        function redirectToGifts() {
+            // URL para regalos
+            window.open('https://example.com/cadeaux-bapteme', '_blank');
+        }
+
+        function redirectToFlowers() {
+            // URL para flores
+            window.open('https://example.com/fleurs-bapteme', '_blank');
+        }
+
+        function redirectToMusic() {
+            // URL para música
+            window.open('https://example.com/musique-bapteme', '_blank');
+        }
+
+        function scheduleConsultation() {
+            // URL para agendar consulta
+            window.open('https://example.com/consultation-bapteme', '_blank');
+        }
+
+        // Efectos de interacción adicionales
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animación suave al hacer scroll
+            const cards = document.querySelectorAll('.service-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
 </html>
