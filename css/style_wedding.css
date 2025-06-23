@@ -4,7 +4,9 @@ body {
     margin: 0;
     justify-content: center;
     align-items: center;
-    background: #e6f7f5;
+    background-image: url(../img/background_wedding.jpg);
+    background-size: cover;
+    backdrop-filter: blur(2px);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -19,7 +21,7 @@ body {
 }
 
 .icon {
-    background: white;
+    background: linear-gradient(135deg, #a8d8ea, #dcedf5);
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(18, 130, 119, 0.15);
     text-align: center;
@@ -52,7 +54,7 @@ body {
 .icon h3 {
     font-weight: 700;
     font-size: 1.3rem;
-    color: #128277;
+    color: rgb(209, 66, 56);
     margin: 0;
 }
 
