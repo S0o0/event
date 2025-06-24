@@ -2,13 +2,12 @@ body::before {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url(../img/background_company.jpg);
+    background-image: url(../img/background_bapteme.jpg);
     background-size: cover;
-    background-position: 70% center;
+    background-position: center 50%;
     background-repeat: no-repeat;
     /* transform: scale(0.9); */
-    /* dézoom */
-    transform-origin: center center;
+    transform-origin:50%;
     z-index: -1;
     filter: blur(10px);
 }
