@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/style_index.css">
     <link rel="stylesheet" href="./css/style_company.css">
     <link rel="stylesheet" href="./css/style_backbutton.css">
+    <link rel="stylesheet" href="./css/style_iframe.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap" rel="stylesheet">
@@ -26,32 +27,41 @@
 
     <div class="container">
 
-        <a href="https://www.slido.com/fr" id="option">
+        <a class="iframe-link" href="https://www.slido.com/fr" id="option">
             <div class="icon">
                 <img src="img/feedback.png" alt="video-chat">
                 <h3>FEEDBACK</h3>
             </div>
         </a>
-        <a href="https://www.karafun.fr/" id="option">
+        <a class="iframe-link" href="https://www.karafun.fr/" id="option">
             <div class="icon">
                 <img src="img/karaoke.png" alt="karaoke">
                 <h3>KARAOKE</h3>
             </div>
         </a>
-        <a href="https://www.simplebooth.com/" id="option">
+        <a class="iframe-link" href="https://www.simplebooth.com/" id="option">
             <div class="icon">
                 <img src="img/photo.png" alt="photo">
                 <h3>PHOTOBOOTH</h3>
             </div>
         </a>
-        <a href="https://www.loom.com/" id="option">
+        <a class="iframe-link" href="https://www.loom.com/" id="option">
             <div class="icon">
                 <img src="img/video.png" alt="video">
                 <h3>VIDEOBOOTH</h3>
             </div>
         </a>
     </div>
-    <script src="./js/script.BackButton.js"></script>
+
+    <!-- iframe fullscreen -->
+    <iframe id="fullscreen-iframe" sandbox="allow-scripts allow-same-origin"></iframe>
+
+    <!-- bouton fermer iframe -->
+    <button id="close-iframe-btn">✕ Fermer</button>
+
+
+    <script src="./js/scriptBackButton.js"></script>
+    <script src="./js/scriptIframe.js"></script>
 </body>
 
 </html>

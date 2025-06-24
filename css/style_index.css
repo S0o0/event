@@ -16,6 +16,7 @@ body {
     width: max-content;
     padding: 20px 0;
     justify-content: center;
+    padding-top: 100px;
 }
 
 
@@ -145,4 +146,30 @@ body {
     /* ombre portée légère */
     padding: 6px 12px;
     cursor: pointer;
+}
+
+#toplink {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+}
+
+#toplink a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #128277;
+    text-decoration: none;
+    background-color: #ffffff;
+    border: 2px solid #128277;
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(18, 130, 119, 0.2);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#toplink a:hover {
+    background-color: #128277;
+    color: #ffffff;
 }
