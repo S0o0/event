@@ -1,9 +1,9 @@
 <?php
 $dbConn = array(
-    'user' => 'if0_39279743',
-    'pass' => 'M6foUUeTG3gQT',
-    'name' => 'if0_39279743_event',
-    'host' => 'sql310.infinityfree.com'
+    'user' => 'root',
+    'pass' => '',
+    'name' => 'event',
+    'host' => 'localhost'
 );
 
 // Connexion à la base de données

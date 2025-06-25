@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body>
-    <div class="container">
+    <div class="login-container">
         <h2>Connexion</h2>
         <?php if ($message): ?>
             <p class="error"><?= htmlspecialchars($message) ?></p>
