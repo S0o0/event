@@ -25,16 +25,42 @@ body::before {
 .container {
     display: grid;
     grid-template-areas:
-        "tl . tr"
-        ". c ."
-        "bl . br";
+        "tl tm tr"
+        "ml c  mr";
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto;
     gap: 40px;
     padding: 20px;
     justify-content: center;
     align-items: center;
 }
+
+/* Zones */
+.tl {
+    grid-area: tl;
+}
+
+.tm {
+    grid-area: tm;
+}
+
+.tr {
+    grid-area: tr;
+}
+
+.ml {
+    grid-area: ml;
+}
+
+.c {
+    grid-area: c;
+}
+
+.mr {
+    grid-area: mr;
+}
+
+
 
 .item {
     display: flex;
