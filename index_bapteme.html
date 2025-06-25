@@ -55,6 +55,20 @@
     <!-- bouton fermer iframe -->
     <button id="close-iframe-btn">✕ Fermer</button>
 
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const modules = ['livreor', 'programme', 'photo', 'plan', 'video', 'karaoke', 'facetime', 'feedback'];
+            modules.forEach(moduleName => {
+                if (localStorage.getItem(`module_${moduleName}`) === 'disabled') {
+                    const elements = document.querySelectorAll(`[data-module="${moduleName}"]`);
+                    elements.forEach(el => el.classList.add('disabled'));
+                }
+            });
+        });
+    </script>
+
+    </script>
+
     <script src="./js/scriptBackButton.js"></script>
     <script src="./js/scriptIframe.js"></script>
 </body>
