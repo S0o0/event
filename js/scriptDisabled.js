@@ -4,6 +4,28 @@ function toggleModule(checkbox) {
         localStorage.setItem(`module_${module}`, 'enabled');
     } else {
         localStorage.setItem(`module_${module}`, 'disabled');
+<<<<<<< HEAD
+=======
+    }
+    updateModuleState(module);
+}
+
+function updateModuleState(module) {
+    const link = document.querySelector(`a[data-module="${module}"]`);
+    const checkbox = document.querySelector(`input[data-module="${module}"]`);
+    const label = document.getElementById(`status-${module}`);
+
+    if (!link || !checkbox || !label) return;
+
+    if (checkbox.checked) {
+        link.classList.remove('disabled');
+        link.removeEventListener('click', preventClick);
+        // label.textContent = "✅ Activé";
+    } else {
+        link.classList.add('disabled');
+        link.addEventListener('click', preventClick);
+        // label.textContent = "❌ Désactivé";
+>>>>>>> main
     }
     updateModuleState(module);
 }
