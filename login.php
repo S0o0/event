@@ -31,7 +31,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Authentification réussie
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
-            header('Location: dashboard.php');
+            $_SESSION['rights'] = [
+                'wedding' => (bool) $user['wedding'],
+                'birthday' => (bool) $user['birthday'],
+                'bapteme' => (bool) $user['bapteme'],
+                'company' => (bool) $user['company'],
+            ];
+            header('Location: index.php');
             exit();
         } else {
             $message = "Nom d'utilisateur ou mot de passe incorrect.";
@@ -46,51 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8" />
     <title>Connexion</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            padding: 30px;
-        }
-
-        .container {
-            max-width: 400px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 8px #ccc;
-        }
-
-        input[type=text],
-        input[type=password] {
-            width: 100%;
-            padding: 10px;
-            margin: 8px 0;
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        input[type=submit] {
-            width: 100%;
-            background-color: #28a745;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        input[type=submit]:hover {
-            background-color: #218838;
-        }
-
-        .error {
-            color: red;
-            margin-bottom: 15px;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/style_login.css">
 </head>
 
 <body>
