@@ -54,6 +54,20 @@
 
     <!-- bouton fermer iframe -->
     <button id="close-iframe-btn">✕ Fermer</button>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const isLivreOrEnabled = localStorage.getItem('module_livreor') !== 'disabled';
+            const livreOrLink = document.querySelector('.iframe-link[href*="vocalvideo.com"]'); // ou autre sélecteur précis
+
+            if (!isLivreOrEnabled && livreOrLink) {
+                livreOrLink.classList.add('disabled');
+                livreOrLink.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    alert("Le module Livre d'or vidéo est désactivé.");
+                });
+            }
+        });
+    </script>
 
     <script src="./js/scriptBackButton.js"></script>
     <script src="./js/scriptIframe.js"></script>
