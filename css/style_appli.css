@@ -5,9 +5,11 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    overflow: hidden;
 }
 
-body::before {
+/* body::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -15,70 +17,35 @@ body::before {
     background-size: cover;
     background-position: 70% center;
     background-repeat: no-repeat;
-    /* transform: scale(0.9); */
-    /* dézoom */
     transform-origin: center center;
     z-index: -1;
     filter: blur(10px);
-}
+} */
 
 .container {
     display: grid;
-    grid-template-areas:
-        "tl tm tr"
-        "ml c  mr"
-        ".  bottom .";
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto auto;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 colonnes */
+    grid-template-rows: repeat(4, auto);
+    /* 4 lignes */
     gap: 40px;
     padding: 20px;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 
-
-/* Zones */
-.tl {
-    grid-area: tl;
-}
-
-.tm {
-    grid-area: tm;
-}
-
-.tr {
-    grid-area: tr;
-}
-
-.ml {
-    grid-area: ml;
-}
-
-.c {
-    grid-area: c;
-}
-
-.mr {
-    grid-area: mr;
-}
-
-.bottom {
-    grid-area: bottom;
-}
-
-
-
+/* Contenu de chaque cellule */
 .item {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Style des icônes */
 .icon {
     position: relative;
-    /* pour positionner le pseudo-élément */
     overflow: hidden;
-    /* pour ne pas que la brillance dépasse */
     background: linear-gradient(135deg, #a8d8ea, #dcedf5);
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(18, 130, 119, 0.15);
@@ -96,12 +63,24 @@ body::before {
     box-sizing: border-box;
 }
 
+.icon:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(18, 130, 119, 0.3);
+}
+
+.icon img {
+
+    height: auto;
+    margin-bottom: 15px;
+}
+
 .icon h3 {
     font-weight: 700;
     font-size: 1.3rem;
     color: #081141;
     margin: 0;
     font-family: 'Rubik', sans-serif;
+    text-align: center;
 }
 
 #option {
@@ -110,4 +89,43 @@ body::before {
     color: inherit;
     width: 100%;
     height: 100%;
+}
+
+.tick {
+    position: absolute;
+    top: 10px;
+    width: 24px;
+    height: 24px;
+    background-image: url('../img/tick.png');
+    /* une image tick verte transparente */
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: none;
+    /* caché par défaut */
+}
+
+.item {
+    position: relative;
+    /* important pour positionner le tick par rapport à l’item */
+}
+
+.tick-left {
+    left: 10px;
+}
+
+.tick-right {
+    right: 10px;
+}
+
+a.clicked {
+    pointer-events: none;
+    /* Désactive les clics */
+    opacity: 0.6;
+    /* Atténue visuellement */
+    cursor: default;
+    /* Change le curseur */
+    filter: grayscale(70%);
+    /* Optionnel : effet désactivé */
+    transform: scale(0.98);
+    /* Optionnel : léger effet de clic */
 }

@@ -14,13 +14,6 @@ try {
     die("Erreur de connexion à la base de données : " . $e->getMessage());
 }
 
-$rights = $_SESSION['rights'] ?? [
-    'wedding' => false,
-    'birthday' => false,
-    'bapteme' => false,
-    'company' => false
-];
-
 // Redirection si non connecté
 if (!isset($_SESSION['user_id'])) {
     header('Location: login.php');
@@ -42,45 +35,38 @@ if (!isset($_SESSION['user_id'])) {
 <body>
 
     <header id="toplink">
-        <a href="connexion.html">Connectez-vous aux différentes applications</a>
+        <a href="appli.html">Connectez-vous aux différentes applications</a>
     </header>
 
     <div class="container">
-        <?php if ($rights['wedding']): ?>
-            <a href="index_wedding.html" id="wedding">
-                <div class="icon">
-                    <img src="./img/wedding.png" alt="Mariage" class="btn">
-                    <h3>Mariage</h3>
-                </div>
-            </a>
-        <?php endif; ?>
+        <a href="index_wedding.html" id="wedding">
+            <div class="icon">
+                <img src="./img/wedding.png" alt="Mariage" class="btn">
+                <h3>Mariage</h3>
+            </div>
+        </a>
 
-        <?php if ($rights['birthday']): ?>
-            <a href="index_birthday.html" id="birthday">
-                <div class="icon">
-                    <img src="./img/birthday2.png" alt="Anniversaire" class="btn">
-                    <h3>Anniversaire</h3>
-                </div>
-            </a>
-        <?php endif; ?>
+        <a href="index_birthday.html" id="birthday">
+            <div class="icon">
+                <img src="./img/birthday2.png" alt="Anniversaire" class="btn">
+                <h3>Anniversaire</h3>
+            </div>
+        </a>
 
-        <?php if ($rights['bapteme']): ?>
-            <a href="index_bapteme.html" id="bapteme">
-                <div class="icon">
-                    <img src="./img/bapteme.png" alt="Baptême" class="btn">
-                    <h3>Baptême</h3>
-                </div>
-            </a>
-        <?php endif; ?>
 
-        <?php if ($rights['company']): ?>
-            <a href="index_company.html" id="company">
-                <div class="icon">
-                    <img src="./img/company.png" alt="Evènements d'entreprise" class="btn">
-                    <h3>Évènement d'entreprise</h3>
-                </div>
-            </a>
-        <?php endif; ?>
+        <a href="index_bapteme.html" id="bapteme">
+            <div class="icon">
+                <img src="./img/bapteme.png" alt="Baptême" class="btn">
+                <h3>Baptême</h3>
+            </div>
+        </a>
+
+        <a href="index_company.html" id="company">
+            <div class="icon">
+                <img src="./img/company.png" alt="Evènements d'entreprise" class="btn">
+                <h3>Évènement d'entreprise</h3>
+            </div>
+        </a>
 
     </div>
 </body>
