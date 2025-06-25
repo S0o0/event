@@ -37,7 +37,6 @@ if (!isset($_SESSION['user_id'])) {
     <header id="toplink">
         <a href="appli.html">Connectez-vous aux différentes applications</a>
     </header>
-
     <div class="container">
         <a href="index_wedding.html" id="wedding">
             <div class="icon">
