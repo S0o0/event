@@ -19,60 +19,77 @@
     <div class="container">
         <!-- Ligne du haut -->
         <div class="item">
-            <a href="https://vocalvideo.com/" id="option" class="icon" target="_blank">
+            <a href="https://vocalvideo.com/" id="option" class="icon" target="_blank" data-module="livreor">
                 <img src="./img/livreor.png" alt="Livre d'or">
                 <h3>LIVRE D'OR VIDÉO</h3>
             </a>
+            <input type="checkbox" data-module="livreor" onchange="toggleModule(this)">
+            <span class="status-label" id="status-livreor"></span>
         </div>
 
         <div class="item">
-            <a href="#" id="option" class="icon" target="_blank">
+            <a href="#" id="option" class="icon" target="_blank" data-module="programme">
                 <img src="./img/timetable.png" alt="Programme">
                 <h3>PROGRAMME DU MARIAGE</h3>
             </a>
+            <input type="checkbox" data-module="programme" onchange="toggleModule(this)">
+            <span class="status-label" id="status-programme"></span>
         </div>
 
+
         <div class="item">
-            <a href="https://www.simplebooth.com/" id="option" class="icon" target=" _blank">
+            <a href="https://www.simplebooth.com/" id="option" class="icon" target=" _blank" data-module="photo">
                 <img src="./img/photobooth-ia.jpg" alt="Photobooth">
                 <!-- <h3>PHOTOBOOTH</h3> -->
             </a>
+            <input type="checkbox" data-module="photo" onchange="toggleModule(this)">
+            <span class="status-label" id="status-photo"></span>
         </div>
 
         <!-- Ligne du milieu -->
         <div class="item">
-            <a href="#" id="option" class="icon" target="_blank">
+            <a href="#" id="option" class="icon" target="_blank" data-module="plan">
                 <img src="./img/dinner-table.png" alt="Plan">
                 <h3>PLAN DE TABLE</h3>
             </a>
+            <input type="checkbox" data-module="plan" onchange="toggleModule(this)">
+            <span class="status-label" id="status-plan"></span>
         </div>
 
         <div class="item">
-            <a href="https://www.loom.com/" id="option" class="icon" target="_blank">
+            <a href="https://www.loom.com/" id="option" class="icon" target="_blank" data-module="video">
                 <img src="./img/videobooth-ia.jpg" alt="Videobooth">
                 <!-- <h3>VIDEOBOOTH</h3> -->
             </a>
+            <input type="checkbox" data-module="video" onchange="toggleModule(this)">
+            <span class="status-label" id="status-video"></span>
         </div>
 
         <div class="item">
-            <a href="https://www.karafun.fr/" id="option" class="icon" target="_blank">
+            <a href="https://www.karafun.fr/" id="option" class="icon" target="_blank" data-module="karaoke">
                 <img src="./img/karaoke-ia.jpg" alt="Karaoke">
                 <!-- <h3>KARAOKE</h3> -->
             </a>
+            <input type="checkbox" data-module="karaoke" onchange="toggleModule(this)">
+            <span class="status-label" id="status-karaoke"></span>
         </div>
         <!-- Ligne du bas -->
         <div class="item">
-            <a href="https://www.zoom.com/fr" id="option" class="icon" target="_blank">
+            <a href="https://www.zoom.com/fr" id="option" class="icon" target="_blank" data-module="facetime">
                 <img src="./img/facetime.png" alt="facetime">
                 <h3>APPEL VIDÉO</h3>
             </a>
+            <input type="checkbox" data-module="facetime" onchange="toggleModule(this)">
+            <span class="status-label" id="status-facetime"></span>
         </div>
 
         <div class="item">
-            <a href="https://www.slido.com/fr" id="option" class="icon" target="_blank">
+            <a href="https://www.slido.com/fr" id="option" class="icon" target="_blank" data-module="feedback">
                 <img src="./img/feedback.png" alt="Feedback">
                 <h3>FEEDBACK</h3>
             </a>
+            <input type="checkbox" data-module="feedback" onchange="toggleModule(this)">
+            <span class="status-label" id="status-feedback"></span>
         </div>
     </div>
 
