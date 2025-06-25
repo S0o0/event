@@ -74,10 +74,9 @@ body {
 
 .icon {
     background: white;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     box-shadow: 0 8px 20px rgba(18, 130, 119, 0.15);
     text-align: center;
-    padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     user-select: none;
@@ -96,10 +95,12 @@ body {
 }
 
 .icon img {
-    width: 250px;
+    width: 300px;
     height: auto;
-    object-fit: contain;
-    margin-bottom: 10px;
+    object-fit: cover;
+    /* couvre tout sans déformation, en coupant si besoin */
+    display: block;
+    /* enlève l’espace blanc sous l’image */
     filter: drop-shadow(0 3px 3px rgba(0, 41, 37, 0.3));
     border-radius: 20px;
 }

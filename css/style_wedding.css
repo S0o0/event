@@ -79,7 +79,7 @@ body::before {
     /* pour positionner le pseudo-élément */
     overflow: hidden;
     /* pour ne pas que la brillance dépasse */
-    background:none !important;
+    background:none;
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(18, 130, 119, 0.15);
     text-align: center;
