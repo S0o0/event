@@ -18,11 +18,11 @@ function updateModuleState(module) {
     if (checkbox.checked) {
         link.classList.remove('disabled');
         link.removeEventListener('click', preventClick);
-        label.textContent = "✅ Activé";
+        // label.textContent = "✅ Activé";
     } else {
         link.classList.add('disabled');
         link.addEventListener('click', preventClick);
-        label.textContent = "❌ Désactivé";
+        // label.textContent = "❌ Désactivé";
     }
 }
 

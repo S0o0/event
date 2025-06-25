@@ -9,6 +9,43 @@
     <link rel="stylesheet" href="./css/style_appli.css">
     <link rel="stylesheet" href="./css/style_backbutton.css">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* style_toggle.css */
+
+        .toggle-switch {
+            position: relative;
+            width: 50px;
+            height: 26px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background: #ccc;
+            outline: none;
+            border-radius: 30px;
+            transition: background 0.3s;
+            cursor: pointer;
+        }
+
+        .toggle-switch:checked {
+            background: #4CAF50;
+        }
+
+        .toggle-switch::before {
+            content: "";
+            position: absolute;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            top: 2px;
+            left: 2px;
+            background: white;
+            transition: transform 0.3s;
+        }
+
+        .toggle-switch:checked::before {
+            transform: translateX(24px);
+        }
+    </style>
 </head>
 
 <body>
@@ -23,7 +60,7 @@
                 <img src="./img/livreor.png" alt="Livre d'or">
                 <h3>LIVRE D'OR VIDÉO</h3>
             </a>
-            <input type="checkbox" data-module="livreor" onchange="toggleModule(this)">
+            <input type="checkbox" class="toggle-switch" data-module="livreor" onchange="toggleModule(this)">
             <span class="status-label" id="status-livreor"></span>
         </div>
 
@@ -32,7 +69,7 @@
                 <img src="./img/timetable.png" alt="Programme">
                 <h3>PROGRAMME DU MARIAGE</h3>
             </a>
-            <input type="checkbox" data-module="programme" onchange="toggleModule(this)">
+            <input type="checkbox" class="toggle-switch" data-module="programme" onchange="toggleModule(this)">
             <span class="status-label" id="status-programme"></span>
         </div>
 
@@ -42,7 +79,7 @@
                 <img src="./img/photobooth-ia.jpg" alt="Photobooth">
                 <!-- <h3>PHOTOBOOTH</h3> -->
             </a>
-            <input type="checkbox" data-module="photo" onchange="toggleModule(this)">
+            <input type="checkbox" class="toggle-switch" data-module="photo" onchange="toggleModule(this)">
             <span class="status-label" id="status-photo"></span>
         </div>
 
@@ -52,7 +89,7 @@
                 <img src="./img/dinner-table.png" alt="Plan">
                 <h3>PLAN DE TABLE</h3>
             </a>
-            <input type="checkbox" data-module="plan" onchange="toggleModule(this)">
+            <input type="checkbox" class="toggle-switch" data-module="plan" onchange="toggleModule(this)">
             <span class="status-label" id="status-plan"></span>
         </div>
 
@@ -61,7 +98,7 @@
                 <img src="./img/videobooth-ia.jpg" alt="Videobooth">
                 <!-- <h3>VIDEOBOOTH</h3> -->
             </a>
-            <input type="checkbox" data-module="video" onchange="toggleModule(this)">
+            <input type="checkbox" class="toggle-switch" data-module="video" onchange="toggleModule(this)">
             <span class="status-label" id="status-video"></span>
         </div>
 
@@ -70,7 +107,7 @@
                 <img src="./img/karaoke-ia.jpg" alt="Karaoke">
                 <!-- <h3>KARAOKE</h3> -->
             </a>
-            <input type="checkbox" data-module="karaoke" onchange="toggleModule(this)">
+            <input type="checkbox" class="toggle-switch" data-module="karaoke" onchange="toggleModule(this)">
             <span class="status-label" id="status-karaoke"></span>
         </div>
         <!-- Ligne du bas -->
@@ -79,7 +116,7 @@
                 <img src="./img/facetime.png" alt="facetime">
                 <h3>APPEL VIDÉO</h3>
             </a>
-            <input type="checkbox" data-module="facetime" onchange="toggleModule(this)">
+            <input type="checkbox" class="toggle-switch" data-module="facetime" onchange="toggleModule(this)">
             <span class="status-label" id="status-facetime"></span>
         </div>
 
@@ -88,7 +125,7 @@
                 <img src="./img/feedback.png" alt="Feedback">
                 <h3>FEEDBACK</h3>
             </a>
-            <input type="checkbox" data-module="feedback" onchange="toggleModule(this)">
+            <input type="checkbox" class="toggle-switch" data-module="feedback" onchange="toggleModule(this)">
             <span class="status-label" id="status-feedback"></span>
         </div>
     </div>
