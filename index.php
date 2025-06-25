@@ -14,17 +14,35 @@ try {
     die("Erreur de connexion à la base de données : " . $e->getMessage());
 }
 
-$rights = $_SESSION['rights'] ?? [
-    'wedding' => false,
-    'birthday' => false,
-    'bapteme' => false,
-    'company' => false
-];
+$message = '';
 
-// Redirection si non connecté
-if (!isset($_SESSION['user_id'])) {
-    header('Location: login.php');
-    exit();
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = trim($_POST['username'] ?? '');
+    $password = $_POST['password'] ?? '';
+
+    if ($username === '' || $password === '') {
+        $message = 'Veuillez remplir tous les champs.';
+    } else {
+        $stmt = $pdo->prepare("SELECT * FROM utilisateurs WHERE username = :username");
+        $stmt->execute(['username' => $username]);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($user && password_verify($password, $user['password'])) {
+            // Authentification réussie
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['username'] = $user['username'];
+            $_SESSION['rights'] = [
+                'wedding' => (bool) $user['wedding'],
+                'birthday' => (bool) $user['birthday'],
+                'bapteme' => (bool) $user['bapteme'],
+                'company' => (bool) $user['company'],
+            ];
+            header('Location: index_hub.php');
+            exit();
+        } else {
+            $message = "Nom d'utilisateur ou mot de passe incorrect.";
+        }
+    }
 }
 ?>
 
@@ -32,56 +50,26 @@ if (!isset($_SESSION['user_id'])) {
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil</title>
-    <link rel="stylesheet" href="./css/style_index.css">
-
+    <meta charset="UTF-8" />
+    <title>Connexion</title>
+    <link rel="stylesheet" href="./css/style_login.css">
 </head>
 
 <body>
-
-    <header id="toplink">
-        <a href="connexion.html">Connectez-vous aux différentes applications</a>
-    </header>
-
     <div class="container">
-        <?php if ($rights['wedding']): ?>
-            <a href="index_wedding.html" id="wedding">
-                <div class="icon">
-                    <img src="./img/wedding.png" alt="Mariage" class="btn">
-                    <h3>Mariage</h3>
-                </div>
-            </a>
+        <h2>Connexion</h2>
+        <?php if ($message): ?>
+            <p class="error"><?= htmlspecialchars($message) ?></p>
         <?php endif; ?>
+        <form method="post" action="">
+            <label for="username">Nom d'utilisateur</label>
+            <input type="text" name="username" id="username" required autofocus />
 
-        <?php if ($rights['birthday']): ?>
-            <a href="index_birthday.html" id="birthday">
-                <div class="icon">
-                    <img src="./img/birthday2.png" alt="Anniversaire" class="btn">
-                    <h3>Anniversaire</h3>
-                </div>
-            </a>
-        <?php endif; ?>
+            <label for="password">Mot de passe</label>
+            <input type="password" name="password" id="password" required />
 
-        <?php if ($rights['bapteme']): ?>
-            <a href="index_bapteme.html" id="bapteme">
-                <div class="icon">
-                    <img src="./img/bapteme.png" alt="Baptême" class="btn">
-                    <h3>Baptême</h3>
-                </div>
-            </a>
-        <?php endif; ?>
-
-        <?php if ($rights['company']): ?>
-            <a href="index_company.html" id="company">
-                <div class="icon">
-                    <img src="./img/company.png" alt="Evènements d'entreprise" class="btn">
-                    <h3>Évènement d'entreprise</h3>
-                </div>
-            </a>
-        <?php endif; ?>
-
+            <input type="submit" value="Se connecter" />
+        </form>
     </div>
 </body>
 

@@ -28,6 +28,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt = $pdo->prepare("INSERT INTO utilisateurs (username, password) VALUES ( ?, ?)");
         $stmt->execute([$username, $passwordHash]);
         echo "Inscription réussie !";
+        header ('Location: index.php');
+        exit();
     } catch (PDOException $e) {
         if ($e->errorInfo[1] == 1062) {
             echo "Erreur : Ce nom d'utilisateur ou cet email est déjà utilisé.";
