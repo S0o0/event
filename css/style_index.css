@@ -101,7 +101,7 @@ body {
     object-fit: contain;
     margin-bottom: 15px;
     filter: drop-shadow(0 3px 3px rgba(0, 41, 37, 0.3));
-    border-radius : 20px;
+    border-radius: 20px;
 }
 
 .icon h3 {
@@ -170,4 +170,12 @@ body {
 #toplink a:hover {
     background-color: #128277;
     color: #ffffff;
+}
+
+a.disabled {
+    pointer-events: none;
+    opacity: 0.4;
+    filter: grayscale(100%);
+    cursor: not-allowed;
+    transform: none;
 }
