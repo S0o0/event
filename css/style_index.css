@@ -97,7 +97,7 @@ body {
 
 .icon img {
     width: 250px;
-    height: auto;
+    height: 250px;
     object-fit: contain;
     margin-bottom: 10px;
     filter: drop-shadow(0 3px 3px rgba(0, 41, 37, 0.3));
