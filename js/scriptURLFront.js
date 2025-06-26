@@ -10,6 +10,7 @@ btn.addEventListener('click', () => {
         }
         localStorage.setItem('accueilUrl', url);
         alert('URL enregistrée');
+        location.reload();
     } else {
         alert("Merci d'entrer une URL");
     }

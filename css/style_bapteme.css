@@ -25,10 +25,7 @@ body::before {
 
 .container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /* 2 colonnes */
-    grid-template-rows: auto auto auto;
-    /* 3 lignes */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 40px;
     padding: 20px;
     justify-items: center;
@@ -41,12 +38,10 @@ body::before {
     /* limite la largeur pour garder l'harmonie */
 }
 
-/* Pour centrer le 5e item sous les 4 premiers */
-.container>.item:nth-child(5):nth-last-child(1) {
-    grid-column: 1 / span 2;
-    /* prend les 2 colonnes */
+
+.container>.item:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
     justify-self: center;
-    /* centre horizontalement */
 }
 
 .item {
