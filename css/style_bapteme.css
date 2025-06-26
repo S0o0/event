@@ -26,30 +26,28 @@ body::before {
 .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* 2 colonnes */
     grid-template-rows: repeat(4, auto);
-    /* 4 lignes */
     gap: 40px;
     padding: 20px;
     justify-content: center;
     align-items: center;
     z-index: 1;
+    padding-top: 100px;
 }
 
-/* Contenu de chaque cellule */
 .item {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Style des icônes */
+/* Icônes */
 .icon {
     position: relative;
     overflow: hidden;
-    background:none;
+    background: none;
     border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(18, 130, 119, 0.15);
+    /* box-shadow: 0 8px 20px rgba(18, 130, 119, 0.15); */
     text-align: center;
     padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -59,19 +57,38 @@ body::before {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 300px;
+    width: auto;
     height: auto;
     box-sizing: border-box;
 }
 
 .icon:hover {
     transform: scale(1.05);
-    box-shadow: 0 12px 30px rgba(18, 130, 119, 0.3);
+    /* box-shadow: 0 12px 30px rgba(18, 130, 119, 0.3); */
 }
 
 .icon img {
+    width: 250px;
     height: auto;
-    margin-bottom: 15px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 3px 3px rgba(0, 41, 37, 0.3));
+    border-radius: 20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-5px) rotate(1deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
 }
 
 .icon h3 {
@@ -83,6 +100,15 @@ body::before {
     text-align: center;
 }
 
+/* Liens internes des cartes */
+#wedding,
+#bapteme,
+#company,
+#birthday,
+#video-chat,
+#karaoke,
+#photobooth,
+#videobooth,
 #option {
     text-decoration: none;
     display: flex;
@@ -91,102 +117,52 @@ body::before {
     height: 100%;
 }
 
-.tick {
-    position: absolute;
-    top: 10px;
-    width: 24px;
-    height: 24px;
-    background-image: url('../img/tick.png');
-    /* une image tick verte transparente */
-    background-size: contain;
-    background-repeat: no-repeat;
-    display: none;
-    /* caché par défaut */
-}
-
-.item {
-    position: relative;
-    /* important pour positionner le tick par rapport à l’item */
-}
-
-.tick-left {
-    left: 10px;
-}
-
-.tick-right {
+/* Bouton Admin */
+#admin-access {
+    position: fixed;
+    bottom: 10px;
     right: 10px;
 }
 
-a.clicked {
-    pointer-events: none;
-    /* Désactive les clics */
-    opacity: 0.6;
-    /* Atténue visuellement */
-    cursor: default;
-    /* Change le curseur */
-    filter: grayscale(70%);
-    /* Optionnel : effet désactivé */
-    transform: scale(0.98);
-    /* Optionnel : léger effet de clic */
-}
-
-.toggle-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 50px;
-    height: 25px;
-}
-
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.slider {
-    position: absolute;
+#admin-access button {
+    background-color: #c3c8ce;
+    font-family: 'Rubik', sans-serif;
+    font-size: 0.7rem;
+    border: 2px solid #494d50;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(122, 138, 153, 0.4);
+    padding: 6px 12px;
     cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: .3s;
-    border-radius: 25px;
 }
 
-.slider:before {
+/* Lien retour en haut */
+#toplink {
     position: absolute;
-    content: "";
-    height: 19px;
-    width: 19px;
-    left: 3px;
-    bottom: 3px;
-    background-color: white;
-    transition: .3s;
-    border-radius: 50%;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
 }
 
-input:checked+.slider {
-    background-color: #4CAF50;
+#toplink a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #128277;
+    text-decoration: none;
+    background-color: #ffffff;
+    border: 2px solid #128277;
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(18, 130, 119, 0.2);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-input:checked+.slider:before {
-    transform: translateX(24px);
+#toplink a:hover {
+    background-color: #128277;
+    color: #ffffff;
 }
 
-.status-label {
-    font-size: 0.9em;
-    font-weight: bold;
-}
-
+/* Liens désactivés */
 a.disabled {
     pointer-events: none;
     opacity: 0.4;
