@@ -26,6 +26,9 @@
                 <img src="./img/video-home.png" alt="Accueil">
                 <h3>ACCUEIL</h3>
             </a>
+            <!-- Input pour changer dynamiquement le lien -->
+            <input type="text" id="input-url" placeholder="Entrez votre URL" oninput="updateAccueilLink(this)" />
+            <button id="save-btn">Enregistrer</button>
             <input type="checkbox" class="toggle-switch" data-module="accueil" onchange="toggleModule(this)">
             <span class="status-label" id="status-accueil"></span>
         </div>
@@ -132,6 +135,8 @@
     </div>
 
     <script src="./js/scriptDisabled.js"></script>
+    <script src="./js/scriptURLFront.js"></script>
+    <script src="./js/scriptURLBack.js"></script>
 </body>
 
 </html>

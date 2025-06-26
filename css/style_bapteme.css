@@ -129,7 +129,8 @@ body::before {
 #karaoke,
 #photobooth,
 #videobooth,
-#option {
+#option,
+#accueil-link {
     text-decoration: none;
     display: flex;
     color: inherit;

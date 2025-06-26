@@ -117,7 +117,8 @@ body::before {
 #video-chat,
 #karaoke,
 #photobooth,
-#videobooth {
+#videobooth,
+#accueil-link {
     text-decoration: none;
     display: flex;
     color: inherit;

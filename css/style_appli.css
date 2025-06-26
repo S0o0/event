@@ -243,3 +243,45 @@ a.disabled {
 .toggle-switch:checked::before {
     transform: translateX(24px);
 }
+
+#input-url {
+    padding: 10px 15px;
+    width: 220px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-family: 'Rubik', sans-serif;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+}
+
+#input-url:focus {
+    border-color: #081141;
+    box-shadow: 0 0 6px rgba(8, 17, 65, 0.3);
+}
+
+#save-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background-color: #081141;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-family: 'Rubik', sans-serif;
+}
+
+#save-btn:hover {
+    background-color: #293271;
+    transform: translateY(-2px);
+}
+
+#save-btn:active {
+    transform: scale(0.98);
+    background-color: #1b1f4a;
+}
