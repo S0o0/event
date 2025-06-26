@@ -29,10 +29,6 @@ body {
     box-sizing: border-box;
 }
 
-.container .item:last-child {
-    grid-column: 2;
-}
-
 /* Contenu de chaque cellule */
 .item {
     display: flex;
