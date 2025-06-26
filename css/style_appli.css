@@ -7,20 +7,8 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position: relative;
     overflow: hidden;
+    background : #f1def0;
 }
-
-/* body::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: url(../img/background_wedding.jpg);
-    background-size: cover;
-    background-position: 70% center;
-    background-repeat: no-repeat;
-    transform-origin: center center;
-    z-index: -1;
-    filter: blur(10px);
-} */
 
 .container {
     display: grid;
@@ -46,9 +34,9 @@ body {
 .icon {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, #a8d8ea, #dcedf5);
+    background: none;
     border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(18, 130, 119, 0.15);
+    /* box-shadow: 0 8px 20px rgba(18, 130, 119, 0.15); */
     text-align: center;
     padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -65,12 +53,31 @@ body {
 
 .icon:hover {
     transform: scale(1.05);
-    box-shadow: 0 12px 30px rgba(18, 130, 119, 0.3);
+    /* box-shadow: 0 12px 30px rgba(18, 130, 119, 0.3); */
 }
 
 .icon img {
+    width: 250px;
     height: auto;
-    margin-bottom: 15px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 3px 3px rgba(0, 41, 37, 0.3));
+    border-radius: 20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-5px) rotate(1deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
 }
 
 .icon h3 {
@@ -129,13 +136,6 @@ a.clicked {
     /* Optionnel : léger effet de clic */
 }
 
-.toggle-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
-}
-
 .switch {
     position: relative;
     display: inline-block;
@@ -192,4 +192,46 @@ a.disabled {
     filter: grayscale(100%);
     cursor: not-allowed;
     transform: none;
+}
+
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.toggle-switch {
+    position: relative;
+    width: 50px;
+    height: 26px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #ccc;
+    outline: none;
+    border-radius: 30px;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.toggle-switch:checked {
+    background: #4CAF50;
+}
+
+.toggle-switch::before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    background: white;
+    transition: transform 0.3s;
+}
+
+.toggle-switch:checked::before {
+    transform: translateX(24px);
 }
