@@ -22,15 +22,17 @@ body::before {
 
 .container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /* 2 colonnes */
-    grid-template-rows: repeat(4, auto);
-    /* 4 lignes */
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 colonnes */
+    grid-auto-rows: auto;
     gap: 40px;
-    padding: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
     justify-content: center;
     align-items: center;
 }
+
 
 
 .item {
