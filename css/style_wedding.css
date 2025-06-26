@@ -22,45 +22,16 @@ body::before {
 
 .container {
     display: grid;
-    grid-template-areas:
-        "tl tm tr"
-        "ml c  mr"
-        ".  bottom .";
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto auto;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 colonnes */
+    grid-template-rows: repeat(4, auto);
+    /* 4 lignes */
     gap: 40px;
     padding: 20px;
     justify-content: center;
     align-items: center;
 }
 
-.tl {
-    grid-area: tl;
-}
-
-.tm {
-    grid-area: tm;
-}
-
-.tr {
-    grid-area: tr;
-}
-
-.ml {
-    grid-area: ml;
-}
-
-.c {
-    grid-area: c;
-}
-
-.mr {
-    grid-area: mr;
-}
-
-.bottom {
-    grid-area: bottom;
-}
 
 .item {
     display: flex;
@@ -90,7 +61,7 @@ body::before {
 
 .icon:hover {
     transform: scale(1.05);
-    opacity : 0.94;
+    opacity: 0.94;
     /* box-shadow: 0 20px 40px rgba(18, 130, 119, 0.3); */
 }
 
@@ -123,10 +94,16 @@ body::before {
 .icon h3 {
     font-weight: 700;
     font-size: 1.3rem;
-    color: #081141;
+    color: #d4d7e7;
     margin: 0;
     font-family: 'Rubik', sans-serif;
     text-align: center;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    opacity : 0.85;
 }
 
 #option,
