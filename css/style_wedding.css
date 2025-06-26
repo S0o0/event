@@ -33,7 +33,9 @@ body::before {
     align-items: center;
 }
 
-
+.container>.item:last-child {
+    grid-column: 2;
+}
 
 .item {
     display: flex;
