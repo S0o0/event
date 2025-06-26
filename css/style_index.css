@@ -92,6 +92,7 @@ body {
 
 .icon:hover {
     transform: translateY(-10px);
+    opacity : 0.94;
     box-shadow: 0 20px 40px rgba(18, 130, 119, 0.3);
 }
 

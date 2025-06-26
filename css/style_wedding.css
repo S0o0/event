@@ -89,7 +89,8 @@ body::before {
 }
 
 .icon:hover {
-    transform: translateY(-10px);
+    transform: scale(1.05);
+    opacity : 0.94;
     /* box-shadow: 0 20px 40px rgba(18, 130, 119, 0.3); */
 }
 
@@ -125,6 +126,7 @@ body::before {
     color: #081141;
     margin: 0;
     font-family: 'Rubik', sans-serif;
+    text-align: center;
 }
 
 #option,
