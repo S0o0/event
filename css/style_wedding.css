@@ -15,8 +15,6 @@ body::before {
     background-size: cover;
     background-position: 70% center;
     background-repeat: no-repeat;
-    /* transform: scale(0.9); */
-    /* dézoom */
     transform-origin: center center;
     z-index: -1;
     filter: blur(10px);
@@ -36,8 +34,6 @@ body::before {
     align-items: center;
 }
 
-
-/* Zones */
 .tl {
     grid-area: tl;
 }
@@ -66,8 +62,6 @@ body::before {
     grid-area: bottom;
 }
 
-
-
 .item {
     display: flex;
     justify-content: center;
@@ -76,12 +70,10 @@ body::before {
 
 .icon {
     position: relative;
-    /* pour positionner le pseudo-élément */
     overflow: hidden;
-    /* pour ne pas que la brillance dépasse */
-    background:none;
+    background: none;
     border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(18, 130, 119, 0.15);
+    /* box-shadow: 0 8px 20px rgba(18, 130, 119, 0.15); */
     text-align: center;
     padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -96,6 +88,37 @@ body::before {
     box-sizing: border-box;
 }
 
+.icon:hover {
+    transform: translateY(-10px);
+    /* box-shadow: 0 20px 40px rgba(18, 130, 119, 0.3); */
+}
+
+.icon img {
+    width: 250px;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 3px 3px rgba(0, 41, 37, 0.3));
+    border-radius: 20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-5px) rotate(1deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+
+
 .icon h3 {
     font-weight: 700;
     font-size: 1.3rem;
@@ -104,10 +127,69 @@ body::before {
     font-family: 'Rubik', sans-serif;
 }
 
-#option {
+#option,
+#wedding,
+#bapteme,
+#company,
+#birthday,
+#video-chat,
+#karaoke,
+#photobooth,
+#videobooth {
     text-decoration: none;
     display: flex;
     color: inherit;
     width: 100%;
     height: 100%;
+}
+
+#admin-access {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+#admin-access button {
+    background-color: #c3c8ce;
+    font-family: 'Rubik', sans-serif;
+    font-size: 0.7rem;
+    border: 2px solid #494d50;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(122, 138, 153, 0.4);
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+#toplink {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+}
+
+#toplink a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #128277;
+    text-decoration: none;
+    background-color: #ffffff;
+    border: 2px solid #128277;
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(18, 130, 119, 0.2);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#toplink a:hover {
+    background-color: #128277;
+    color: #ffffff;
+}
+
+a.disabled {
+    pointer-events: none;
+    opacity: 0.4;
+    filter: grayscale(100%);
+    cursor: not-allowed;
+    transform: none;
 }
