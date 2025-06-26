@@ -5,12 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anniversaire</title>
-    <!-- <link rel="stylesheet" href="./css/style_index.css"> -->
-    <link rel="stylesheet" href="./css/style_backbutton.css">
     <link rel="stylesheet" href="./css/style_birthday.css">
-    <link rel="stylesheet" href="./css/style_iframe.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
@@ -22,7 +17,7 @@
 
     <div class="container">
         <div class="item">
-            <a class="iframe-link" href="#" data-module="accueil" id="accueil-link">
+            <a class="popup-link" href="#" data-module="accueil" id="accueil-link">
                 <div class="icon">
                     <img src="img/video-home.png" alt="Accueil">
                     <h3>ACCUEIL</h3>
@@ -31,7 +26,7 @@
         </div>
 
         <div class="item">
-            <a href="https://www.zoom.com/" class="iframe-link" data-module="facetime" id="video-chat">
+            <a href="https://www.zoom.com/" class="popup-link" data-module="facetime" id="video-chat">
                 <div class="icon">
                     <img src="img/facetime.png" alt="video-chat">
                     <h3>APPEL VIDÉO</h3>
@@ -39,7 +34,7 @@
             </a>
         </div>
         <div class="item">
-            <a href="https://www.karafun.fr/" class="iframe-link" data-module="karaoke" id="karaoke">
+            <a href="https://www.karafun.fr/" class="popup-link" data-module="karaoke" id="karaoke">
                 <div class="icon">
                     <img src="img/karaorke-ia(1).jpg" alt="karaoke">
                     <!-- <h3>KARAOKE</h3> -->
@@ -47,7 +42,7 @@
             </a>
         </div>
         <div class="item">
-            <a href="https://www.simplebooth.com/" class="iframe-link" data-module="photo" id="photobooth">
+            <a href="https://www.simplebooth.com/" class="popup-link" data-module="photo" id="photobooth">
                 <div class="icon">
                     <img src="img/photobooth-ia.jpg" alt="photo">
                     <!-- <h3>PHOTOBOOTH</h3> -->
@@ -55,7 +50,7 @@
             </a>
         </div>
         <div class="item">
-            <a href="https://www.loom.com/" class="iframe-link" data-module="video" id="videobooth">
+            <a href="https://www.loom.com/" class="popup-link" data-module="video" id="videobooth">
                 <div class="icon">
                     <img src="img/videobooth-ia.jpg" alt="video">
                     <!-- <h3>VIDEOBOOTH</h3> -->
@@ -64,15 +59,9 @@
         </div>
     </div>
 
-    <!-- iframe fullscreen -->
-    <iframe id="fullscreen-iframe" sandbox="allow-scripts allow-same-origin"></iframe>
-
-    <!-- bouton fermer iframe -->
-    <button id="close-iframe-btn">✕ Fermer</button>
-
     <script src="./js/scriptGrey.js"></script>
     <script src="./js/scriptBackButton.js"></script>
-    <script src="./js/scriptIframe.js"></script>
+    <script src="./js/scriptPopup.js"></script>
     <script src="./js/scriptURLBack.js"></script>
 </body>
 

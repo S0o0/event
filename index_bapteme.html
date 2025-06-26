@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baptême</title>
     <link rel="stylesheet" href="./css/style_bapteme.css">
-    <link rel="stylesheet" href="./css/style_backbutton.css">
-    <link rel="stylesheet" href="./css/style_iframe.css">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
@@ -20,7 +18,7 @@
 
     <div class="container">
         <div class="item">
-            <a class="iframe-link" id="accueil-link" href="#" data-module="accueil">
+            <a class="popup-link" id="accueil-link" href="#" data-module="accueil">
                 <div class="icon">
                     <img src="img/video-home.png" alt="Accueil">
                     <h3>ACCUEIL</h3>
@@ -28,7 +26,7 @@
             </a>
         </div>
         <div class="item">
-            <a class="iframe-link" href="https://www.zoom.com/fr" data-module="facetime" id="option">
+            <a class="popup-link" href="https://www.zoom.com/fr" data-module="facetime" id="option">
                 <div class="icon">
                     <img src="img/facetime.png" alt="video-chat">
                     <h3>APPEL VIDÉO</h3>
@@ -37,7 +35,7 @@
         </div>
 
         <div class="item">
-            <a class="iframe-link" href="https://vocalvideo.com/" data-module="livreor" id="option">
+            <a class="popup-link" href="https://vocalvideo.com/" data-module="livreor" id="option">
                 <div class="icon">
                     <img src="img/livreor.png" alt="Livre d'or">
                     <h3>LIVRE D'OR VIDÉO</h3>
@@ -46,14 +44,14 @@
         </div>
 
         <div class="item">
-            <a href="#" id="option" data-module="livreoraudio" class="icon iframe-link">
+            <a href="#" id="option" data-module="livreoraudio" class="icon popup-link">
                 <img src="./img/livreoraudio.png" alt="Livre d'or audio">
                 <h3>LIVRE D'OR AUDIO</h3>
             </a>
         </div>
 
         <div class="item">
-            <a class="iframe-link" href="https://www.simplebooth.com/" data-module="photo" id="option">
+            <a class="popup-link" href="https://www.simplebooth.com/" data-module="photo" id="option">
                 <div class="icon">
                     <img src="img/photobooth-ia.jpg" alt="Photobooth">
                     <!-- <h3>PHOTOBOOTH</h3> -->
@@ -62,7 +60,7 @@
         </div>
 
         <div class="item">
-            <a class="iframe-link" href="https://www.loom.com/" data-module="video" id="option">
+            <a class="popup-link" href="https://www.loom.com/" data-module="video" id="option">
                 <div class="icon">
                     <img src="img/videobooth-ia.jpg" alt="Videobooth">
                     <!-- <h3>VIDEOBOOTH</h3> -->
@@ -71,7 +69,7 @@
         </div>
 
         <div class="item">
-            <a class="iframe-link" href="https://www.loom.com/" data-module="karaoke" id="option">
+            <a class="popup-link" href="https://www.loom.com/" data-module="karaoke" id="option">
                 <div class="icon">
                     <img src="img/karaorke-ia(1).jpg" alt="Karaoke">
                     <!-- <h3>VIDEOBOOTH</h3> -->
@@ -80,16 +78,9 @@
         </div>
     </div>
 
-    <!-- iframe fullscreen -->
-    <iframe id="fullscreen-iframe" sandbox="allow-scripts allow-same-origin"></iframe>
-
-    <!-- bouton fermer iframe -->
-    <button id="close-iframe-btn">✕ Fermer</button>
-
-
     <script src="./js/scriptGrey.js"></script>
     <script src="./js/scriptBackButton.js"></script>
-    <script src="./js/scriptIframe.js"></script>
+    <script src="./js/scriptPopup.js"></script>
     <script src="./js/scriptURLBack.js"></script>
 </body>
 
