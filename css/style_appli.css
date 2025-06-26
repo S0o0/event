@@ -6,39 +6,48 @@ body {
     align-items: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position: relative;
-    overflow: hidden;
-    background : #f1def0;
+    overflow: auto;
+    /* scroll si dépassement vertical */
+    background: #f1def0;
+    padding: 20px;
+    /* pour ne pas coller aux bords */
 }
 
 .container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /* 2 colonnes */
-    grid-template-rows: repeat(4, auto);
-    /* 4 lignes */
-    gap: 40px;
-    padding: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 colonnes */
+    grid-auto-rows: auto;
+    gap: 25px 30px;
+    /* espace vertical et horizontal */
+    padding: 10px;
     justify-content: center;
     align-items: center;
-    z-index: 1;
+    max-width: 1000px;
+    /* max largeur pour éviter étirement */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.container .item:last-child {
+    grid-column: 2;
 }
 
 /* Contenu de chaque cellule */
 .item {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 /* Style des icônes */
 .icon {
-    position: relative;
-    overflow: hidden;
     background: none;
     border-radius: 20px;
-    /* box-shadow: 0 8px 20px rgba(18, 130, 119, 0.15); */
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     user-select: none;
@@ -46,18 +55,20 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 300px;
-    height: 300px;
+    width: 220px;
+    /* largeur réduite */
+    height: 220px;
+    /* hauteur réduite */
     box-sizing: border-box;
 }
 
 .icon:hover {
     transform: scale(1.05);
-    /* box-shadow: 0 12px 30px rgba(18, 130, 119, 0.3); */
 }
 
 .icon img {
-    width: 250px;
+    width: 180px;
+    /* réduit proportionnellement */
     height: auto;
     object-fit: contain;
     margin-bottom: 10px;
