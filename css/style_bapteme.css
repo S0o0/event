@@ -13,7 +13,7 @@ body::before {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url(../img/background_bapteme.jpg);
+    background-image: url(../img/bapteme.JPG);
     background-size: cover;
     background-position: center 50%;
     background-repeat: no-repeat;

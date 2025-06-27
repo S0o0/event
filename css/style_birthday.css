@@ -11,7 +11,7 @@ body::before {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url(../img/background_birthday.jpg);
+    background-image: url(../img/birthday.JPG);
     background-size: cover;
     background-position: center 50%;
     background-repeat: no-repeat;

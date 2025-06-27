@@ -11,7 +11,7 @@ body::before {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url(../img/background_wedding.jpg);
+    background-image: url(../img/mariage.JPG);
     background-size: cover;
     background-position: 70% center;
     background-repeat: no-repeat;

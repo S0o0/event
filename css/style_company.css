@@ -11,7 +11,7 @@ body::before {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url(../img/background_company.jpg);
+    background-image: url(../img/company.JPG);
     background-size: cover;
     background-position: 70% center;
     background-repeat: no-repeat;
