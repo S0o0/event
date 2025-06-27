@@ -137,13 +137,27 @@ body::before {
 }
 
 #admin-access button {
-    background-color: #c3c8ce;
-    font-family: 'Rubik', sans-serif;
-    font-size: 0.7rem;
-    border: 2px solid #494d50;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(122, 138, 153, 0.4);
-    padding: 6px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #444647, #2f3235);
+    border-radius: 10px;
+}
+
+#admin-access button img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+
+#admin-access button:hover {
+    background: linear-gradient(135deg, #1e1e1f, #131414);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
     cursor: pointer;
 }
 
