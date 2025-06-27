@@ -27,9 +27,9 @@
                 <h3>ACCUEIL</h3>
             </a>
             <!-- Input pour changer dynamiquement le lien -->
-            <input type="text" class="input-url" data-module="accueil" placeholder="Entrez votre URL"
-                oninput="updateAccueilLink(this)" />
-            <button class="save-btn" data-module="accueil">Enregistrer</button>
+            <input type="text" id="input-url-accueil" class="input-url" data-module="accueil"
+                placeholder="Entrez votre URL" oninput="updateAccueilLink(this)" />
+            <button id="save-btn-accueil"class="save-btn" data-module="accueil">Enregistrer</button>
             <input type="checkbox" class="toggle-switch" data-module="accueil" onchange="toggleModule(this)">
             <span class="status-label" id="status-accueil"></span>
         </div>
