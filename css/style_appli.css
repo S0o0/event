@@ -246,6 +246,8 @@ input:checked+.slider:before {
     font-weight: bold;
 }
 
+input.disabled,
+button.disabled,
 a.disabled {
     pointer-events: none;
     opacity: 0.4;
@@ -296,7 +298,7 @@ a.disabled {
     transform: translateX(24px);
 }
 
-#input-url {
+.input-url {
     padding: 10px 15px;
     width: 220px;
     font-size: 1rem;
@@ -310,17 +312,17 @@ a.disabled {
     box-sizing: border-box;
 }
 
-#input-url:focus {
+.input-url:focus {
     border-color: #081141;
     box-shadow: 0 0 6px rgba(8, 17, 65, 0.3);
 }
 
-#save-btn {
+.save-btn {
     padding: 10px 20px;
     font-size: 1rem;
     font-weight: 600;
     color: white;
-    background-color: #081141;
+    background-color: #28a745;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -328,12 +330,12 @@ a.disabled {
     font-family: 'Rubik', sans-serif;
 }
 
-#save-btn:hover {
-    background-color: #293271;
+.save-btn:hover {
+    background-color: #3ac85c;
     transform: translateY(-2px);
 }
 
-#save-btn:active {
+.save-btn:active {
     transform: scale(0.98);
-    background-color: #1b1f4a;
+    background-color: #208838;
 }

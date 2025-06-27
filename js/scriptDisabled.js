@@ -10,21 +10,40 @@ function toggleModule(checkbox) {
 
 function updateModuleState(module) {
     const link = document.querySelector(`a[data-module="${module}"]`);
-    const checkbox = document.querySelector(`input[data-module="${module}"]`);
+    const checkbox = document.querySelector(`input[type="checkbox"][data-module="${module}"]`);
     const label = document.getElementById(`status-${module}`);
+    const input = document.querySelector(`input.input-url[data-module="${module}"]`);
+    const saveBtn = document.querySelector(`button.save-btn[data-module="${module}"]`);
 
-    if (!link || !checkbox || !label) return;
+    if (!link || !checkbox || !label) return; // input et saveBtn sont optionnels pour certains modules
 
     if (checkbox.checked) {
         link.classList.remove('disabled');
         link.removeEventListener('click', preventClick);
-        // label.textContent = "✅ Activé";
+
+        if (input) {
+            input.disabled = false;
+            input.classList.remove('disabled');
+        }
+        if (saveBtn) {
+            saveBtn.disabled = false;
+            saveBtn.classList.remove('disabled');
+        }
     } else {
         link.classList.add('disabled');
         link.addEventListener('click', preventClick);
-        // label.textContent = "❌ Désactivé";
+
+        if (input) {
+            input.disabled = true;
+            input.classList.add('disabled');
+        }
+        if (saveBtn) {
+            saveBtn.disabled = true;
+            saveBtn.classList.add('disabled');
+        }
     }
 }
+
 
 function preventClick(e) {
     e.preventDefault();
