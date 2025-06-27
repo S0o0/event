@@ -67,9 +67,9 @@ if (!isset($_SESSION['user_id'])) {
             </div>
         </a>
 
-        <a href="index_company.html" id="company">
+        <a href="index_concert.html" id="concert">
             <div class="icon">
-                <img src="./img/concert.png" alt="Evènements d'entreprise" class="btn">
+                <img src="./img/concert.png" alt="Concert" class="btn">
                 <!-- <h3>Évènement d'entreprise</h3> -->
             </div>
         </a>
