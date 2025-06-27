@@ -1,101 +1,69 @@
+/* style_index.css */
+
 body {
     display: flex;
     height: 100vh;
     margin: 0;
     justify-content: center;
     align-items: center;
-    background: #e6f7f5;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(-45deg, #0d0d0d, #1a1a1a, #000000, #1a1a1a);
+    background: radial-gradient(ellipse at center, #111 0%, #000 100%);
+    animation: subtlePulse 20s ease-in-out infinite;
+}
+
+@keyframes subtlePulse {
+    0% {
+        background: radial-gradient(ellipse at center, #111 0%, #000 100%);
+    }
+
+    50% {
+        background: radial-gradient(ellipse at center, #000 0%, #111 100%);
+    }
+
+    100% {
+        background: radial-gradient(ellipse at center, #111 0%, #000 100%);
+    }
 }
 
 .container {
     display: grid;
     grid-template-columns: repeat(2, 300px);
     grid-template-rows: repeat(2, 300px);
-    gap: 40px;
-    width: max-content;
-    padding: 20px 0;
-    justify-content: center;
+    gap: 100px;
     padding-top: 100px;
+    justify-content: center;
+    width: max-content;
+    margin: 0 auto;
 }
 
-
+/* Suppression du fond blanc et de la brillance */
 .icon {
+    background: none;
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    box-sizing: border-box;
     position: relative;
-    /* pour positionner le pseudo-élément */
-    overflow: hidden;
-    /* pour ne pas que la brillance dépasse */
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(18, 130, 119, 0.15);
-    text-align: center;
-    padding: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    user-select: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    height: 300px;
-    box-sizing: border-box;
-}
-
-/* Éclat lumineux animé */
-.icon::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(120deg,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0.2) 50%,
-            rgba(255, 255, 255, 0) 100%);
-    transform: rotate(25deg);
-    animation: shimmer 3s infinite;
-    pointer-events: none;
-    /* pour ne pas bloquer les clics */
-}
-
-@keyframes shimmer {
-    0% {
-        transform: translateX(-100%) rotate(25deg);
-    }
-
-    100% {
-        transform: translateX(100%) rotate(25deg);
-    }
-}
-
-
-
-.icon {
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(18, 130, 119, 0.15);
-    text-align: center;
-    padding: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    user-select: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    height: 300px;
-    box-sizing: border-box;
 }
 
 .icon:hover {
-    transform: translateY(-10px);
-    opacity : 0.94;
-    box-shadow: 0 20px 40px rgba(18, 130, 119, 0.3);
+    transform: scale(1.05);
+    opacity: 0.94;
 }
 
+/* Images avec effet flottant */
 .icon img {
     width: 250px;
     height: auto;
@@ -103,48 +71,44 @@ body {
     margin-bottom: 10px;
     filter: drop-shadow(0 3px 3px rgba(0, 41, 37, 0.3));
     border-radius: 20px;
+    animation: float 3s ease-in-out infinite;
 }
 
+/* Animation de flottement */
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-5px) rotate(1deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+/* Texte lisible avec ombre portée */
 .icon h3 {
     font-weight: 700;
     font-size: 1.3rem;
-    color: #128277;
+    color: #eeeeee;
     margin: 0;
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
 }
 
+/* Liens pleins */
 #wedding,
 #bapteme,
 #company,
-#birthday,
-#video-chat,
-#karaoke,
-#photobooth,
-#videobooth {
+#birthday {
     text-decoration: none;
     display: flex;
     color: inherit;
     width: 100%;
     height: 100%;
-}
-
-
-#admin-access {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-}
-
-#admin-access button {
-    background-color: #c3c8ce;
-    font-family: 'Rubik', sans-serif;
-    font-size: 0.7rem;
-    border: 2px solid #494d50;
-    /* bordure douce */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(122, 138, 153, 0.4);
-    /* ombre portée légère */
-    padding: 6px 12px;
-    cursor: pointer;
 }
 
 #toplink {
@@ -171,12 +135,4 @@ body {
 #toplink a:hover {
     background-color: #128277;
     color: #ffffff;
-}
-
-a.disabled {
-    pointer-events: none;
-    opacity: 0.4;
-    filter: grayscale(100%);
-    cursor: not-allowed;
-    transform: none;
 }

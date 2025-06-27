@@ -40,33 +40,46 @@ if (!isset($_SESSION['user_id'])) {
     <div class="container">
         <a href="index_wedding.html" id="wedding">
             <div class="icon">
-                <img src="./img/wedding.png" alt="Mariage" class="btn">
-                <h3>Mariage</h3>
+                <img src="./img/mariage.JPG" alt="Mariage" class="btn">
+                <!-- <h3>Mariage</h3> -->
             </div>
         </a>
 
         <a href="index_birthday.html" id="birthday">
             <div class="icon">
-                <img src="./img/birthday2.png" alt="Anniversaire" class="btn">
-                <h3>Anniversaire</h3>
+                <img src="./img/birthday.JPG" alt="Anniversaire" class="btn">
+                <!-- <h3>Anniversaire</h3> -->
             </div>
         </a>
 
 
         <a href="index_bapteme.html" id="bapteme">
             <div class="icon">
-                <img src="./img/bapteme.png" alt="Baptême" class="btn">
-                <h3>Baptême</h3>
+                <img src="./img/bapteme.JPG" alt="Baptême" class="btn">
+                <!-- <h3>Baptême</h3> -->
             </div>
         </a>
 
         <a href="index_company.html" id="company">
             <div class="icon">
-                <img src="./img/company.png" alt="Evènements d'entreprise" class="btn">
-                <h3>Évènement d'entreprise</h3>
+                <img src="./img/company.JPG" alt="Evènements d'entreprise" class="btn">
+                <!-- <h3>Évènement d'entreprise</h3> -->
             </div>
         </a>
 
+        <a href="index_company.html" id="company">
+            <div class="icon">
+                <img src="./img/concert.png" alt="Evènements d'entreprise" class="btn">
+                <!-- <h3>Évènement d'entreprise</h3> -->
+            </div>
+        </a>
+
+        <a href="index_company.html" id="company">
+            <div class="icon">
+                <img src="./img/company.JPG" alt="Evènements d'entreprise" class="btn">
+                <!-- <h3>Évènement d'entreprise</h3> -->
+            </div>
+        </a>
     </div>
 </body>
 
