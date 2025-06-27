@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Récupère tous les liens qui ont un data-module
-    const links = document.querySelectorAll('.iframe-link[data-module]');
+    const links = document.querySelectorAll('[data-module]');
 
     links.forEach(link => {
         const module = link.dataset.module;
