@@ -174,7 +174,7 @@ body::before {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: white;
+    background: black;
     /* ou noir, ou autre */
     z-index: 9999;
     pointer-events: none;
