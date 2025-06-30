@@ -33,7 +33,7 @@ if (!isset($_SESSION['user_id'])) {
 </head>
 
 <body>
-
+    <div id="transition-overlay"></div>
     <header id="toplink">
         <a href="appli.html">Connectez-vous aux différentes applications</a>
     </header>
@@ -81,6 +81,7 @@ if (!isset($_SESSION['user_id'])) {
             </div>
         </a>
     </div>
+    <script src="./js/scriptAnimation.js"></script>
 </body>
 
 </html>
