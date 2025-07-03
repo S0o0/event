@@ -53,6 +53,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8" />
     <title>Connexion</title>
     <link rel="stylesheet" href="./css/style_login.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0d6efd">
+    <link rel="icon" href="img/facetime.png">
 </head>
 
 <body>
@@ -71,6 +74,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input type="submit" value="Se connecter" />
         </form>
     </div>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+                .then(reg => console.log('Service Worker enregistré', reg))
+                .catch(err => console.error('Erreur Service Worker', err));
+        }
+    </script>
+
 </body>
 
 </html>
