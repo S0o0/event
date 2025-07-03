@@ -109,7 +109,7 @@ body::before {
 }
 
 .icon img {
-    width: 250px;
+    width: 300px;
     /* réduit proportionnellement */
     height: 425px;
     margin-bottom: 10px;
